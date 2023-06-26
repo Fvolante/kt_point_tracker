@@ -30,26 +30,26 @@
                 <input type="text" name="home-team-name" id="home-team-name" placeholder="Team name">
 
                 <div id="home-team">
-                    <div id="home-tot-points" class="tot-points">16</div>
+                    <div id="home-tot-points" class="tot-points"></div>
 
                     <div class="home-tracker home-ops">
                         <div class="name-side">
                             <div class="name-points">Tac ops points</div>
-                            <button class="triangle-top"></button>
-                            <button class="triangle-bottom"></button>
+                            <button class="triangle-top" id="add-home-tac-ops"></button>
+                            <button class="triangle-bottom" id="remove-home-tac-ops"></button>
                         </div>
 
-                        <div id="home-tacops" class="small-points small-points-up">3</div>
+                        <div id="home-tacops" class="small-points small-points-up">0</div>
                     </div>
                 
                     <div class="home-tracker home-mission">
                         <div class="name-side">
                             <div class="name-points">Mission points</div>
-                            <button class="triangle-top"></button>
-                            <button class="triangle-bottom"></button>
+                            <button class="triangle-top" id="add-home-mission"></button>
+                            <button class="triangle-bottom" id="remove-home-mission"></button>
                         </div>
 
-                        <div id="home-mission" class="small-points small-points-down">3</div>
+                        <div id="home-mission" class="small-points small-points-down">0</div>
                     </div>
                     
                 </div>
@@ -59,26 +59,26 @@
                 <input type="text" name="guest-team-name" id="guest-team-name" placeholder="Team name" class="text-align-end">
 
                 <div id="guest-team" class="rotate">
-                    <div id="guest-tot-points" class="tot-points rotate">16</div>
+                    <div id="guest-tot-points" class="tot-points rotate"></div>
 
                     <div class="guest-tracker guest-ops">
                         <div class="name-side rotate">
                             <div class="name-points">Tac ops points</div>
-                            <button class="triangle-top"></button>
-                            <button class="triangle-bottom"></button>
+                            <button class="triangle-top" id="add-guest-tac-ops"></button>
+                            <button class="triangle-bottom" id="add-guest-tac-ops"></button>
                         </div>
 
-                        <div id="guest-tacops" class="small-points small-points-up rotate">3</div>
+                        <div id="guest-tacops" class="small-points small-points-up rotate">0</div>
                     </div>
                 
                     <div class="guest-tracker guest-mission">
                         <div class="name-side rotate">
                             <div class="name-points">Mission points</div>
-                            <button class="triangle-top"></button>
-                            <button class="triangle-bottom"></button>
+                            <button class="triangle-top" id="add-guest-mission"></button>
+                            <button class="triangle-bottom" id="remove-guest-mission"></button>
                         </div>
 
-                        <div id="guest-mission" class="small-points small-points-down rotate">3</div>
+                        <div id="guest-mission" class="small-points small-points-down rotate">0</div>
                     </div>
                     
                 </div>
@@ -94,7 +94,7 @@
                     <div>Add operative</div>
                 </div>
 
-                <ul id="operative-list-home">
+                <ul id="operative-list-home">   
                     <li>
                         <div class="operative-info">
                             <div class="top-side">
