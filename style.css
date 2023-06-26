@@ -72,6 +72,7 @@ h1 {
 
 .background {
     background-image: url(assets/Background-Footer-Image.jpg);
+    background-size: cover;
 }
 
 /* ------------- POINTS SECTION ------------- */
@@ -83,7 +84,6 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-    background-size: cover;
     margin-bottom: 4rem;
 }
 
@@ -433,6 +433,8 @@ h1 {
 .add-operative-section  {
     display: flex;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
 }
 
 .add-operative-section div {
@@ -453,6 +455,106 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+
+#add-operative-home:hover,
+#add-operative-guest:hover {
+    border: 3px solid var(--light-gray);
+    background-color: var(--orange);
+    
+}
+
+.operative-info {
+    margin-bottom: 3rem;
+}
+
+ul {
+    list-style: none;
+    width: 320px;
+}
+
+.top-side {
+    display: flex;
+}
+
+.wounds-side,
+.exp-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.info {
+    height: 40px;
+    background-color: transparent;
+    font-size: 1.3rem !important;
+    text-align: center;
+}
+
+.info-square {
+    display: inline-block;
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    background-image: url(assets/orange_bkg_3.jpg);
+    color: var(--light-gray);
+}
+
+.top-side input {
+    height: 2rem;
+    border: none;
+    margin-right: 0.2rem;
+    max-width: 89%;
+    font-size: 1.2rem;
+    padding: 0 0.5rem;
+    font-weight: 800;
+    background-color: var(--light-gray);
+    border-left: 5px solid var(--orange);
+}
+
+.top-side button {
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--orange);
+   
+}
+
+.top-side img {
+    width: 100%;
+    color: var(--gray);
+}
+
+.down-side div {
+    font-size: 1.7rem;
+    color: var(--light-gray);
+}
+
+.small-exagon {
+    width: 3rem;
+    height: 2.5rem;
+    background-size: cover;
+    background-position: bottom;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ITCMachineW03-Medium", serif;
+    font-size: 2rem !important;
+    text-shadow: 0px 0px 2px var(--gray);
+    color: var(--light-gray);
+    background-image: url(assets/orange_bkg_1.jpg);
+    border: none;
+
+    /* to fix font character's alignment */
+    letter-spacing: -2px;
+    padding-right: 4px;
+}
     
 @media screen and (min-width: 768px) {
 
@@ -471,6 +573,10 @@ h1 {
 
     .add-operative-section div {
         font-size: 1.2rem;
+    }
+
+    .add-operative-section {
+        margin-bottom: 4rem;
     }
 }
 

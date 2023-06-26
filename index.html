@@ -16,106 +16,141 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app">
-        <header>
-            <img src="assets/killteam-logo.png" alt="logo">
-            <h1>Warhammer 40k Kill team point Tracker</h1>
-        </header>
+<header>
+    <img src="assets/killteam-logo.png" alt="logo">
+    <h1>Warhammer 40k Kill team point Tracker</h1>
+</header>
 
-        <main>
+<main>
 
-            <div class="background">
+    <div class="background">
 
-                <section id="points-section">
-                    <div>
-                        <input type="text" name="home-team-name" id="home-team-name" placeholder="Team name">
-    
-                        <div id="home-team">
-                            <div id="home-tot-points" class="tot-points">16</div>
-        
-                            <div class="home-tracker home-ops">
-                                <div class="name-side">
-                                    <div class="name-points">Tac ops points</div>
-                                    <button class="triangle-top"></button>
-                                    <button class="triangle-bottom"></button>
-                                </div>
-        
-                                <div id="home-tacops" class="small-points small-points-up">3</div>
-                            </div>
-                        
-                            <div class="home-tracker home-mission">
-                                <div class="name-side">
-                                    <div class="name-points">Mission points</div>
-                                    <button class="triangle-top"></button>
-                                    <button class="triangle-bottom"></button>
-                                </div>
-        
-                                <div id="home-mission" class="small-points small-points-down">3</div>
-                            </div>
-                            
+        <section id="points-section">
+            <div>
+                <input type="text" name="home-team-name" id="home-team-name" placeholder="Team name">
+
+                <div id="home-team">
+                    <div id="home-tot-points" class="tot-points">16</div>
+
+                    <div class="home-tracker home-ops">
+                        <div class="name-side">
+                            <div class="name-points">Tac ops points</div>
+                            <button class="triangle-top"></button>
+                            <button class="triangle-bottom"></button>
                         </div>
-                    </div>
-    
-                    <div class="text-align-end">
-                        <input type="text" name="guest-team-name" id="guest-team-name" placeholder="Team name" class="text-align-end">
-    
-                        <div id="guest-team" class="rotate">
-                            <div id="guest-tot-points" class="tot-points rotate">16</div>
-        
-                            <div class="guest-tracker guest-ops">
-                                <div class="name-side rotate">
-                                    <div class="name-points">Tac ops points</div>
-                                    <button class="triangle-top"></button>
-                                    <button class="triangle-bottom"></button>
-                                </div>
-        
-                                <div id="guest-tacops" class="small-points small-points-up rotate">3</div>
-                            </div>
-                        
-                            <div class="guest-tracker guest-mission">
-                                <div class="name-side rotate">
-                                    <div class="name-points">Mission points</div>
-                                    <button class="triangle-top"></button>
-                                    <button class="triangle-bottom"></button>
-                                </div>
-        
-                                <div id="guest-mission" class="small-points small-points-down rotate">3</div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </section>
-    
-                <section id="operatives-section">
-                    <div id="home-operatives">
-                        <h3 id="operative-home-team-name">Stocazzo</h3>
-    
-                        <div class="add-operative-section">
-                            <button id="add-operative-home">+</button>
-                            <div>Add operative</div>
-                        </div>
-    
-                        <ul id="home-list-home">
-                        </ul>
-                    </div>
-    
-                    <div id="guest-operatives">
-                        <h3 id="operative-guest-team-name">Staceppa</h3>
 
-                        <div class="add-operative-section">
-                            <button id="add-operative-guest">+</button>
-                            <div>Add operative</div>
-                        </div>
-    
-                        <ul id="home-list-guest">
-                        </ul>
+                        <div id="home-tacops" class="small-points small-points-up">3</div>
                     </div>
-                </section>
+                
+                    <div class="home-tracker home-mission">
+                        <div class="name-side">
+                            <div class="name-points">Mission points</div>
+                            <button class="triangle-top"></button>
+                            <button class="triangle-bottom"></button>
+                        </div>
 
+                        <div id="home-mission" class="small-points small-points-down">3</div>
+                    </div>
+                    
+                </div>
             </div>
 
-        </main>
+            <div class="text-align-end">
+                <input type="text" name="guest-team-name" id="guest-team-name" placeholder="Team name" class="text-align-end">
+
+                <div id="guest-team" class="rotate">
+                    <div id="guest-tot-points" class="tot-points rotate">16</div>
+
+                    <div class="guest-tracker guest-ops">
+                        <div class="name-side rotate">
+                            <div class="name-points">Tac ops points</div>
+                            <button class="triangle-top"></button>
+                            <button class="triangle-bottom"></button>
+                        </div>
+
+                        <div id="guest-tacops" class="small-points small-points-up rotate">3</div>
+                    </div>
+                
+                    <div class="guest-tracker guest-mission">
+                        <div class="name-side rotate">
+                            <div class="name-points">Mission points</div>
+                            <button class="triangle-top"></button>
+                            <button class="triangle-bottom"></button>
+                        </div>
+
+                        <div id="guest-mission" class="small-points small-points-down rotate">3</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="operatives-section">
+            <div id="home-operatives">
+                <h3 id="operative-home-team-name">Team name</h3>
+
+                <div class="add-operative-section">
+                    <button id="add-operative-home">+</button>
+                    <div>Add operative</div>
+                </div>
+
+                <ul id="operative-list-home">
+                    <li>
+                        <div class="operative-info">
+                            <div class="top-side">
+                                <input type="text">
+                                <button><img src="assets/skull_icon.png" alt="skull icon"></button>
+                            </div>
+
+                            <div class="down-side">
+                                <div class="wounds-side">
+                                    <div class="buttons">
+                                        <button class="small-exagon">+</button>
+                                        <button class="small-exagon">-</button>
+                                    </div>
+
+                                    <div class="info">
+                                        <span>WOUNDS</span>
+                                        <div class="info-square">3</div> 
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="exp-side">
+                                    <div class="info">
+                                        <div class="info-square">3</div> 
+                                        <span>EXP</span>
+                                    </div>
+                                    
+                                    <div class="buttons">
+                                        <button class="small-exagon">+</button>
+                                        <button class="small-exagon">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div id="guest-operatives">
+                <h3 id="operative-guest-team-name">Team name</h3>
+
+                <div class="add-operative-section">
+                    <button id="add-operative-guest">+</button>
+                    <div>Add operative</div>
+                </div>
+
+                <ul id="operative-list-guest">
+                </ul>
+            </div>
+        </section>
+
     </div>
+
+</main>
+    
     <script src="script.js"></script>
 </body>
 </html>
