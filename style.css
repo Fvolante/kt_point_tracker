@@ -56,8 +56,8 @@ h1 {
     font-size: 1.5rem;
     margin-bottom: 3rem;
     color: var(--gray);
-    font-family: "ITCMachineW03-Medium", serif;
     letter-spacing: 4px;    
+    font-family: "ITCMachineW03-Medium", serif;
 }
 
 @media screen and (min-width: 768px) {
@@ -70,6 +70,9 @@ h1 {
     }
 }
 
+.background {
+    background-image: url(assets/Background-Footer-Image.jpg);
+}
 
 /* ------------- POINTS SECTION ------------- */
 
@@ -80,8 +83,8 @@ h1 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 1.5rem;
-    background-image: url(assets/Background-Footer-Image.jpg);
     background-size: cover;
+    margin-bottom: 4rem;
 }
 
 #home-team,
@@ -405,10 +408,75 @@ h1 {
     }
 }
 
+/* ------------- OPERATIVES SECTION ------------- */
+
+#operatives-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+    gap: 4rem;
+    text-align: center;
+}
+
+#operative-home-team-name,
+#operative-guest-team-name {
+    font-size: 1.5rem;
+    font-family: "ITCMachineW03-Medium", serif;
+    letter-spacing: 2px;
+    color: var(--light-gray);
+    text-shadow: 0px 0px 2px var(--gray);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.add-operative-section  {
+    display: flex;
+    align-items: center;
+}
+
+.add-operative-section div {
+    color: var(--light-gray);
+    font-size: 1.5rem;
+    text-shadow: 0px 0px 2px var(--gray);
+}
+
+#add-operative-home,
+#add-operative-guest {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    border: 3px solid var(--orange);
+    margin-right: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+    
+@media screen and (min-width: 768px) {
+
+    #operative-home-team-name,
+    #operative-guest-team-name {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    #add-operative-home,
+    #add-operative-guest {
+        height: 40px;
+        width: 40px;
+        font-size: 2rem;
+    }
+
+    .add-operative-section div {
+        font-size: 1.2rem;
+    }
+}
 
 /* 
 FONT HEADING 2.2rem - 1.5rem
-FONT TEAM NAME 2.2rem -1.5rem
-FONT POINTS 2rem -1.3rem
+FONT TEAM NAME 2.2rem - 1.5rem
+FONT POINTS 2rem - 1.3rem
 EXAGON MEASURES 2rem diff
 */

@@ -24,65 +24,95 @@
 
         <main>
 
-            <section id="points-section">
-                <div>
-                    <input type="text" name="home-team-name" id="home-team-name" placeholder="Team name">
+            <div class="background">
 
-                    <div id="home-team">
-                        <div id="home-tot-points" class="tot-points">16</div>
+                <section id="points-section">
+                    <div>
+                        <input type="text" name="home-team-name" id="home-team-name" placeholder="Team name">
     
-                        <div class="home-tracker home-ops">
-                            <div class="name-side">
-                                <div class="name-points">Tac ops points</div>
-                                <button class="triangle-top"></button>
-                                <button class="triangle-bottom"></button>
+                        <div id="home-team">
+                            <div id="home-tot-points" class="tot-points">16</div>
+        
+                            <div class="home-tracker home-ops">
+                                <div class="name-side">
+                                    <div class="name-points">Tac ops points</div>
+                                    <button class="triangle-top"></button>
+                                    <button class="triangle-bottom"></button>
+                                </div>
+        
+                                <div id="home-tacops" class="small-points small-points-up">3</div>
                             </div>
-    
-                            <div id="home-tacops" class="small-points small-points-up">3</div>
-                        </div>
-                    
-                        <div class="home-tracker home-mission">
-                            <div class="name-side">
-                                <div class="name-points">Mission points</div>
-                                <button class="triangle-top"></button>
-                                <button class="triangle-bottom"></button>
-                            </div>
-    
-                            <div id="home-mission" class="small-points small-points-down">3</div>
-                        </div>
                         
+                            <div class="home-tracker home-mission">
+                                <div class="name-side">
+                                    <div class="name-points">Mission points</div>
+                                    <button class="triangle-top"></button>
+                                    <button class="triangle-bottom"></button>
+                                </div>
+        
+                                <div id="home-mission" class="small-points small-points-down">3</div>
+                            </div>
+                            
+                        </div>
                     </div>
-                </div>
-
-                <div class="text-align-end">
-                    <input type="text" name="guest-team-name" id="guest-team-name" placeholder="Team name" class="text-align-end">
-
-                    <div id="guest-team" class="rotate">
-                        <div id="guest-tot-points" class="tot-points rotate">16</div>
     
-                        <div class="guest-tracker guest-ops">
-                            <div class="name-side rotate">
-                                <div class="name-points">Tac ops points</div>
-                                <button class="triangle-top"></button>
-                                <button class="triangle-bottom"></button>
+                    <div class="text-align-end">
+                        <input type="text" name="guest-team-name" id="guest-team-name" placeholder="Team name" class="text-align-end">
+    
+                        <div id="guest-team" class="rotate">
+                            <div id="guest-tot-points" class="tot-points rotate">16</div>
+        
+                            <div class="guest-tracker guest-ops">
+                                <div class="name-side rotate">
+                                    <div class="name-points">Tac ops points</div>
+                                    <button class="triangle-top"></button>
+                                    <button class="triangle-bottom"></button>
+                                </div>
+        
+                                <div id="guest-tacops" class="small-points small-points-up rotate">3</div>
                             </div>
-    
-                            <div id="guest-tacops" class="small-points small-points-up rotate">3</div>
-                        </div>
-                    
-                        <div class="guest-tracker guest-mission">
-                            <div class="name-side rotate">
-                                <div class="name-points">Mission points</div>
-                                <button class="triangle-top"></button>
-                                <button class="triangle-bottom"></button>
-                            </div>
-    
-                            <div id="guest-mission" class="small-points small-points-down rotate">3</div>
-                        </div>
                         
+                            <div class="guest-tracker guest-mission">
+                                <div class="name-side rotate">
+                                    <div class="name-points">Mission points</div>
+                                    <button class="triangle-top"></button>
+                                    <button class="triangle-bottom"></button>
+                                </div>
+        
+                                <div id="guest-mission" class="small-points small-points-down rotate">3</div>
+                            </div>
+                            
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+    
+                <section id="operatives-section">
+                    <div id="home-operatives">
+                        <h3 id="operative-home-team-name">Stocazzo</h3>
+    
+                        <div class="add-operative-section">
+                            <button id="add-operative-home">+</button>
+                            <div>Add operative</div>
+                        </div>
+    
+                        <ul id="home-list-home">
+                        </ul>
+                    </div>
+    
+                    <div id="guest-operatives">
+                        <h3 id="operative-guest-team-name">Staceppa</h3>
+
+                        <div class="add-operative-section">
+                            <button id="add-operative-guest">+</button>
+                            <div>Add operative</div>
+                        </div>
+    
+                        <ul id="home-list-guest">
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
 
         </main>
     </div>
