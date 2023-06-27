@@ -33,7 +33,7 @@ let childList = operativeListHome.children;
 console.log(childList);
 
 let childArr = Array.from(childList);
-console.log(childArr);
+console.log(childArr.length);
 
 
 /* MANAGE VICTORY POINTS */
@@ -112,4 +112,72 @@ homeTeamName.addEventListener("change", function() {
 
 guestTeamName.addEventListener("change", function() {
     operativeGuestTeamName.innerText = guestTeamName.value
+})
+
+
+/* ADD OPERATIVE ELEMENTS */
+
+function createOperative(team) {
+
+    const operativeListHome = document.getElementById("operative-list-home");
+    const operativeListGuest = document.getElementById("operative-list-guest");
+
+    const li = document.createElement("li");
+    let newOperative = `
+        <div class="operative-info">
+            <div class="top-side">
+                <input type="text">
+                <button><img src="assets/skull_icon.png" alt="skull icon"></button>
+            </div>
+
+            <div class="down-side">
+                <div class="wounds-side">
+                    <div class="buttons">
+                        <button class="small-exagon">+</button>
+                        <button class="small-exagon">-</button>
+                    </div>
+
+                    <div class="info">
+                        <span>WOUNDS</span>
+                        <div class="info-square">0</div> 
+                    </div>
+                </div>
+
+                <div class="exp-side">
+                    <div class="info">
+                        <div class="info-square">0</div> 
+                        <span>EXP</span>
+                    </div>
+                
+                    <div class="buttons">
+                        <button class="small-exagon">+</button>
+                        <button class="small-exagon">-</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        `;
+
+    li.innerHTML = newOperative;
+
+    if (team === "home") {
+        operativeListHome.appendChild(li);
+    } else if (team === "guest") {
+        operativeListGuest.appendChild(li);
+    }
+    
+}
+
+addOperativeHomeBtn.addEventListener("click", function() {
+    createOperative("home");
+
+    let childList = operativeListHome.children;
+    let childArr = Array.from(childList);
+    console.log(childList.length);
+})
+
+addOperativeGuestBtn.addEventListener("click", function() {
+    createOperative("guest");
+   
 })
