@@ -30,7 +30,7 @@
                 <input type="text" name="home-team-name" id="home-team-name" placeholder="Team name">
 
                 <div id="home-team">
-                    <div id="home-tot-points" class="tot-points"></div>
+                    <div id="home-tot-points" class="tot-points">0</div>
 
                     <div class="home-tracker home-ops">
                         <div class="name-side">
@@ -59,13 +59,13 @@
                 <input type="text" name="guest-team-name" id="guest-team-name" placeholder="Team name" class="text-align-end">
 
                 <div id="guest-team" class="rotate">
-                    <div id="guest-tot-points" class="tot-points rotate"></div>
+                    <div id="guest-tot-points" class="tot-points rotate">0</div>
 
                     <div class="guest-tracker guest-ops">
                         <div class="name-side rotate">
                             <div class="name-points">Tac ops points</div>
                             <button class="triangle-top" id="add-guest-tac-ops"></button>
-                            <button class="triangle-bottom" id="add-guest-tac-ops"></button>
+                            <button class="triangle-bottom" id="remove-guest-tac-ops"></button>
                         </div>
 
                         <div id="guest-tacops" class="small-points small-points-up rotate">0</div>
@@ -94,7 +94,8 @@
                     <div>Add operative</div>
                 </div>
 
-                <ul id="operative-list-home">   
+                <ul id="operative-list-home">  
+
                     <li>
                         <div class="operative-info">
                             <div class="top-side">
@@ -111,14 +112,50 @@
 
                                     <div class="info">
                                         <span>WOUNDS</span>
-                                        <div class="info-square">3</div> 
+                                        <div class="info-square">0</div> 
                                     </div>
                                     
                                 </div>
 
                                 <div class="exp-side">
                                     <div class="info">
-                                        <div class="info-square">3</div> 
+                                        <div class="info-square">0</div> 
+                                        <span>EXP</span>
+                                    </div>
+                                    
+                                    <div class="buttons">
+                                        <button class="small-exagon">+</button>
+                                        <button class="small-exagon">-</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="operative-info">
+                            <div class="top-side">
+                                <input type="text">
+                                <button><img src="assets/skull_icon.png" alt="skull icon"></button>
+                            </div>
+
+                            <div class="down-side">
+                                <div class="wounds-side">
+                                    <div class="buttons">
+                                        <button class="small-exagon">+</button>
+                                        <button class="small-exagon">-</button>
+                                    </div>
+
+                                    <div class="info">
+                                        <span>WOUNDS - stocazzo</span>
+                                        <div class="info-square">0</div> 
+                                    </div>
+                                    
+                                </div>
+
+                                <div class="exp-side">
+                                    <div class="info">
+                                        <div class="info-square">0</div> 
                                         <span>EXP</span>
                                     </div>
                                     
