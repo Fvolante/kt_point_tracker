@@ -28,13 +28,6 @@ const operativeListGuest = document.getElementById("operative-list-guest");
 const addOperativeHomeBtn = document.getElementById("add-operative-home");
 const addOperativeGuestBtn = document.getElementById("add-operative-guest");
 
-//console.log(operativeListHome.children);
-let childList = operativeListHome.children;
-console.log(childList);
-
-let childArr = Array.from(childList);
-console.log(childArr.length);
-
 
 /* MANAGE VICTORY POINTS */
 
@@ -56,6 +49,8 @@ function updateTotalHome() {
 
     homeTotPoints.innerText = tacOps + mission;
 }
+
+// Update single tacops and mission points
 
 function updateTotalGuest() {
     let tacOps = Number(guestTacOpsPoints.innerText);
@@ -116,42 +111,51 @@ guestTeamName.addEventListener("change", function() {
 
 
 /* ADD OPERATIVE ELEMENTS */
-
+/* 
+create html for single operative, then attach eventlisteners to each button
+@param {str} "home" or "guest" string in order to append the el to right team
+*/
 function createOperative(team) {
 
     const operativeListHome = document.getElementById("operative-list-home");
     const operativeListGuest = document.getElementById("operative-list-guest");
 
+    // create el to add to operative list
     const li = document.createElement("li");
+
+    // create an ID
+    let IDNumber = Math.floor(Math.random() * Date.now());
+
+    
     let newOperative = `
         <div class="operative-info">
             <div class="top-side">
                 <input type="text">
-                <button><img src="assets/skull_icon.png" alt="skull icon"></button>
+                <button id="delete-${team}-${IDNumber}"><img src="assets/skull_icon.png" alt="skull icon"></button>
             </div>
 
             <div class="down-side">
                 <div class="wounds-side">
                     <div class="buttons">
-                        <button class="small-exagon">+</button>
-                        <button class="small-exagon">-</button>
+                        <button class="small-exagon" id="add-${team}-wounds-${IDNumber}">+</button>
+                        <button class="small-exagon" id="remove-${team}-wounds-${IDNumber}">-</button>
                     </div>
 
                     <div class="info">
                         <span>WOUNDS</span>
-                        <div class="info-square">0</div> 
+                        <div class="info-square" id="${team}-wounds-${IDNumber}">0</div> 
                     </div>
                 </div>
 
                 <div class="exp-side">
                     <div class="info">
-                        <div class="info-square">0</div> 
+                        <div class="info-square" id="${team}-exp-${IDNumber}">0</div> 
                         <span>EXP</span>
                     </div>
                 
                     <div class="buttons">
-                        <button class="small-exagon">+</button>
-                        <button class="small-exagon">-</button>
+                        <button class="small-exagon" id="add-${team}-exp-${IDNumber}">+</button>
+                        <button class="small-exagon" id="remove-${team}-exp-${IDNumber}">-</button>
                     </div>
                 </div>
 
@@ -166,18 +170,66 @@ function createOperative(team) {
     } else if (team === "guest") {
         operativeListGuest.appendChild(li);
     }
+
+    // grab html elements just created
+    // wounds
+    const addWound = document.getElementById(`add-${team}-wounds-${IDNumber}`);
+    const removeWound = document.getElementById(`remove-${team}-wounds-${IDNumber}`);
+    const wounds = document.getElementById(`${team}-wounds-${IDNumber}`);
+    // exp
+    const addExp = document.getElementById(`add-${team}-exp-${IDNumber}`);
+    const removeExp = document.getElementById(`remove-${team}-exp-${IDNumber}`);
+    const exp = document.getElementById(`${team}-exp-${IDNumber}`);
+    // delete el btn
+    const delBtn = document.getElementById(`delete-${team}-${IDNumber}`);
     
+    addClickFunction(addWound, removeWound, wounds, addExp, removeExp, exp);
+    addDeleteFunction(li, delBtn);
 }
 
+/* 
+add click event on every button generated and update UI
+@params {obj} the obj each element to add on the evenlistener - 6 elements
+*/
+function addClickFunction(addWound, removeWound, wounds, addExp, removeExp, exp) {
+
+    addWound.addEventListener("click", function() {
+        updatePoints(1, wounds);
+    })
+
+    removeWound.addEventListener("click", function() {
+        updatePoints(-1, wounds);
+    })
+
+    addExp.addEventListener("click", function() {
+        updatePoints(1, exp);
+    })
+
+    removeExp.addEventListener("click", function() {
+        updatePoints(-1, exp);
+    })
+}
+
+/* 
+add delete function to btn
+@param {obj} the el to delete
+@param {obj} the btn el which triggers the event
+*/
+function addDeleteFunction(el, btn) {
+
+    btn.addEventListener("click", function() {
+        el.remove()
+    })
+}
+
+
+/* 
+functions to add operative element in each team
+*/
 addOperativeHomeBtn.addEventListener("click", function() {
     createOperative("home");
-
-    let childList = operativeListHome.children;
-    let childArr = Array.from(childList);
-    console.log(childList.length);
 })
 
 addOperativeGuestBtn.addEventListener("click", function() {
     createOperative("guest");
-   
 })
