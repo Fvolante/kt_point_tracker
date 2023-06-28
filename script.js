@@ -28,6 +28,8 @@ const operativeListGuest = document.getElementById("operative-list-guest");
 const addOperativeHomeBtn = document.getElementById("add-operative-home");
 const addOperativeGuestBtn = document.getElementById("add-operative-guest");
 
+// Clear button
+const clearBtn = document.getElementById("clear-btn");
 
 /* MANAGE VICTORY POINTS */
 
@@ -232,4 +234,21 @@ addOperativeHomeBtn.addEventListener("click", function() {
 
 addOperativeGuestBtn.addEventListener("click", function() {
     createOperative("guest");
+})
+
+
+/* CLEAR ALL */
+clearBtn.addEventListener("click", function() {
+
+    // clear operatives
+    operativeListHome.innerHTML = "";
+    operativeListGuest.innerHTML = "";
+
+    // clear points
+    homeTotPoints.innerText = 0;
+    homeTacOpsPoints.innerText = 0;
+    homeMissionPoints.innerText = 0;
+    guestTotPoints.innerText = 0;
+    guestTacOpsPoints.innerText = 0; 
+    guestMissionPoints.innerText = 0;
 })
