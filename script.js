@@ -251,4 +251,10 @@ clearBtn.addEventListener("click", function() {
     guestTotPoints.innerText = 0;
     guestTacOpsPoints.innerText = 0; 
     guestMissionPoints.innerText = 0;
+
+    // teams names
+    guestTeamName.value = "";
+    homeTeamName.value = "";
+    operativeHomeTeamName.textContent = "team name";
+    operativeGuestTeamName.textContent = "team name";
 })
